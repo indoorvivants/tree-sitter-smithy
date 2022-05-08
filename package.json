@@ -14,6 +14,9 @@
   "devDependencies": {
     "tree-sitter-cli": "^0.20.6"
   },
+  "scripts": {
+    "test": "tree-sitter test" 
+  },
   "tree-sitter": [
     {
       "scope": "source.smithy",
