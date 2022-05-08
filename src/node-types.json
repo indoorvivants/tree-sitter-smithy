@@ -1,0 +1,893 @@
+[
+  {
+    "type": "absolute_root_shape_id",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "namespace",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "control_var_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "node_object_key",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "documentation_comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "empty_node_array",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "empty_node_object",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "empty_shape_members",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "list_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "map_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "metadata_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "node_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "namespace",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "namespace_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "namespace",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "empty_node_array",
+          "named": true
+        },
+        {
+          "type": "populated_node_array",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_object",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "empty_node_object",
+          "named": true
+        },
+        {
+          "type": "populated_node_object",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_object_key",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "quoted_text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_object_kvp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "node_object_key",
+          "named": true
+        },
+        {
+          "type": "node_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_string_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "quoted_text",
+          "named": true
+        },
+        {
+          "type": "shape_id",
+          "named": true
+        },
+        {
+          "type": "text_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "node_array",
+          "named": true
+        },
+        {
+          "type": "node_keywords",
+          "named": true
+        },
+        {
+          "type": "node_object",
+          "named": true
+        },
+        {
+          "type": "node_string_value",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "operation_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "node_object",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "populated_node_array",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "node_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "populated_node_object",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "node_object_kvp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "populated_shape_members",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "shape_member_kvp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "preamble",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "metadata_statement",
+          "named": true
+        },
+        {
+          "type": "namespace_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "resource_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "node_object",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "root_shape_id",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "absolute_root_shape_id",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "service_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "node_object",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shape_id",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "root_shape_id",
+          "named": true
+        },
+        {
+          "type": "shape_id_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shape_id_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shape_member_kvp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "shape_id",
+          "named": true
+        },
+        {
+          "type": "trait_statements",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shape_members",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "empty_shape_members",
+          "named": true
+        },
+        {
+          "type": "populated_shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "list_shape_statement",
+          "named": true
+        },
+        {
+          "type": "map_shape_statement",
+          "named": true
+        },
+        {
+          "type": "operation_shape_statement",
+          "named": true
+        },
+        {
+          "type": "resource_shape_statement",
+          "named": true
+        },
+        {
+          "type": "service_shape_statement",
+          "named": true
+        },
+        {
+          "type": "set_shape_statement",
+          "named": true
+        },
+        {
+          "type": "simple_shape_statement",
+          "named": true
+        },
+        {
+          "type": "structure_shape_statement",
+          "named": true
+        },
+        {
+          "type": "union_shape_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "simple_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "simple_type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "preamble",
+          "named": true
+        },
+        {
+          "type": "shape_statement",
+          "named": true
+        },
+        {
+          "type": "trait_statements",
+          "named": true
+        },
+        {
+          "type": "use_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structure_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trait",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "shape_id",
+          "named": true
+        },
+        {
+          "type": "trait_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trait_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "trait_body_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trait_body_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "node_value",
+          "named": true
+        },
+        {
+          "type": "trait_structure",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trait_statements",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "trait",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trait_structure",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "trait_structure_kvp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trait_structure_kvp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "node_object_key",
+          "named": true
+        },
+        {
+          "type": "node_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "union_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "use_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "absolute_root_shape_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "$",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "//",
+    "named": false
+  },
+  {
+    "type": "///",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "apply",
+    "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "list",
+    "named": false
+  },
+  {
+    "type": "map",
+    "named": false
+  },
+  {
+    "type": "metadata",
+    "named": false
+  },
+  {
+    "type": "namespace",
+    "named": false
+  },
+  {
+    "type": "node_keywords",
+    "named": true
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "operation",
+    "named": false
+  },
+  {
+    "type": "quoted_text",
+    "named": true
+  },
+  {
+    "type": "resource",
+    "named": false
+  },
+  {
+    "type": "service",
+    "named": false
+  },
+  {
+    "type": "set",
+    "named": false
+  },
+  {
+    "type": "simple_type_name",
+    "named": true
+  },
+  {
+    "type": "structure",
+    "named": false
+  },
+  {
+    "type": "text_block",
+    "named": true
+  },
+  {
+    "type": "union",
+    "named": false
+  },
+  {
+    "type": "use",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]
