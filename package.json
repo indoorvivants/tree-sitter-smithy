@@ -22,8 +22,7 @@
       "scope": "source.smithy",
       "file-types": [
         "smithy"
-      ],
-      "injection-regex": "smithy"
+      ]
     }
   ]
 }

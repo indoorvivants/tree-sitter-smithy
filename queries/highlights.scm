@@ -6,8 +6,9 @@
   "service"
   "structure"
   "operation"
-  "use"
 ] @keyword
+
+(simple_type_name) @type.builtin
 
 [
   ","
@@ -30,20 +31,20 @@
 (quoted_text) @string
 (comment) @comment
 
-; (shape_id (#is-not? local)) @type
-
-(trait) @attribute
-
-; (absolute_root_shape_id (identifier)) @type
-
 (use_statement
   (absolute_root_shape_id 
     (namespace) @type
     (identifier) @type
   ))
 
+(trait_statements
+  (trait 
+    (shape_id) @attribute
+  ))
 
-; (node_object_key (#is-not? local)) @property
+(node_string_value 
+  (shape_id) @type
+)
 
 (trait_body) @local.scope
 
