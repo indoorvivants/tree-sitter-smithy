@@ -6,9 +6,12 @@
   "service"
   "structure"
   "operation"
+  "list"
+  "map"
 ] @keyword
 
 (simple_type_name) @type.builtin
+"use" @include
 
 [
   ","
@@ -33,7 +36,7 @@
 
 (use_statement
   (absolute_root_shape_id 
-    (namespace) @type
+    (namespace) @namespace
     (identifier) @type
   ))
 
@@ -46,6 +49,23 @@
   (shape_id) @type
 )
 
-(trait_body) @local.scope
+; (trait_body) @local.scope
 
-(identifier) @identifier
+(shape_member_kvp 
+  (identifier) @variable
+  (shape_id) @type
+)
+
+(structure_shape_statement
+  (identifier) @type.definition
+)
+
+(operation_shape_statement
+  (identifier) @type.definition
+)
+(list_shape_statement
+  (identifier) @type.definition
+)
+(simple_shape_statement
+  (identifier) @type.definition
+)
