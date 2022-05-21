@@ -10,6 +10,7 @@
   "map"
   "union"
   "resource"
+  "set"
 ] @keyword
 
 (simple_type_name) @type.builtin
