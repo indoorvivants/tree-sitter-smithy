@@ -8,6 +8,9 @@
   "operation"
   "list"
   "map"
+  "union"
+  "resource"
+  "set"
 ] @keyword
 
 (simple_type_name) @type.builtin
@@ -32,7 +35,13 @@
 
 (number) @number
 (quoted_text) @string
-(comment) @comment
+[
+  (comment)
+  (documentation_comment)
+] @comment
+[ 
+  ("@")
+] @operator
 
 (use_statement
   (absolute_root_shape_id 
@@ -55,11 +64,9 @@
   (identifier) @variable
   (shape_id) @type
 )
-
 (structure_shape_statement
   (identifier) @type.definition
 )
-
 (operation_shape_statement
   (identifier) @type.definition
 )
@@ -67,5 +74,23 @@
   (identifier) @type.definition
 )
 (simple_shape_statement
+  (identifier) @type.definition
+)
+(resource_shape_statement
+  (identifier) @type.definition
+)
+(union_shape_statement
+  (identifier) @type.definition
+)
+(map_shape_statement
+  (identifier) @type.definition
+)
+(service_shape_statement
+  (identifier) @type.definition
+)
+(set_shape_statement
+  (identifier) @type.definition
+)
+(operation_shape_statement
   (identifier) @type.definition
 )
