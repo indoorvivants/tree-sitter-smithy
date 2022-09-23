@@ -104,7 +104,7 @@ module.exports = grammar({
     node_object_kvp: $ => seq($.node_object_key, ':', $.node_value),
     node_keywords: $ => /true|false|null/,
 
-    identifier: $ => /([_]*)([a-zA-Z])([a-zA-Z0-9_]+)/,
+    identifier: $ => /([_]*)([a-zA-Z])([a-zA-Z0-9_]*)/,
     text_block: $ => /"""(.*?)"""/,
     quoted_text: $ => /"([^"]*)"/,
     simple_type_name: $ => /blob|boolean|string|byte|short|integer|long|float|double|bigInteger|timestamp|document/,
