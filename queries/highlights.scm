@@ -10,7 +10,9 @@
   "map"
   "union"
   "resource"
-  "set"
+  "set",
+  "enum",
+  "intEnum"
 ] @keyword
 
 (simple_type_name) @type.builtin
@@ -39,58 +41,61 @@
   (comment)
   (documentation_comment)
 ] @comment
-[ 
+[
   ("@")
 ] @operator
 
 (use_statement
-  (absolute_root_shape_id 
+  (absolute_root_shape_id
     (namespace) @namespace
     (identifier) @type
   ))
 
 (trait_statements
-  (trait 
+  (trait
     (shape_id) @attribute
   ))
 
-(node_string_value 
+(node_string_value
   (shape_id) @type
 )
 
 ; (trait_body) @local.scope
 
-(shape_member_kvp 
+(explicit_member
   (identifier) @variable
   (shape_id) @type
 )
-(structure_shape_statement
+(elided_member
+  (identifier) @variable
+)
+(structure_statement
   (identifier) @type.definition
 )
-(operation_shape_statement
+(operation_statement
   (identifier) @type.definition
 )
-(list_shape_statement
+(list_statement
   (identifier) @type.definition
 )
 (simple_shape_statement
   (identifier) @type.definition
 )
-(resource_shape_statement
+(enum_shape_statement
   (identifier) @type.definition
 )
-(union_shape_statement
+(resource_statement
   (identifier) @type.definition
 )
-(map_shape_statement
+(union_statement
   (identifier) @type.definition
 )
-(service_shape_statement
+(map_statement
   (identifier) @type.definition
 )
-(set_shape_statement
+(service_statement
   (identifier) @type.definition
 )
-(operation_shape_statement
+(operation_statement
   (identifier) @type.definition
 )
