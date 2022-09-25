@@ -10,16 +10,19 @@
   "map"
   "union"
   "resource"
-  "set",
-  "enum",
+  "set"
+  "enum"
   "intEnum"
+  "apply"
+  "for"
+  "with"
+  "metadata"
 ] @keyword
 
 (simple_type_name) @type.builtin
 "use" @include
 
 [
-  ","
   ":"
   "."
 ] @punctuation.delimiter
@@ -51,6 +54,11 @@
     (identifier) @type
   ))
 
+(apply_statement_singular
+  (trait
+    (shape_id) @attribute
+  )
+)
 (trait_statements
   (trait
     (shape_id) @attribute
@@ -68,6 +76,9 @@
 )
 (elided_member
   (identifier) @variable
+)
+(operation_error
+  (identifier) @type
 )
 (structure_statement
   (identifier) @type.definition
@@ -98,4 +109,10 @@
 )
 (operation_statement
   (identifier) @type.definition
+)
+(structure_resource
+  (shape_id) @type
+)
+(mixins
+  (shape_id) @type
 )

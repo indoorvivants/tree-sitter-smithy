@@ -82,8 +82,11 @@ module.exports = grammar({
     operation_member: $ => choice(
       $.explicit_member,
       seq($.identifier, $.inline_structure),
-      seq($.identifier, ':', '[', repeat($.identifier) ,']')
+      $.operation_errors
     ),
+    operation_errors: $ => seq($.identifier, ':', '[', repeat($.operation_error), ']'),
+    operation_error: $ => $.identifier,
+
 
     inline_structure: $ => seq(':=', optional($.trait_statements), optional($.structure_resource), optional($.mixins), $.shape_members_with_assignment),
 
