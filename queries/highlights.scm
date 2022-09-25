@@ -11,12 +11,12 @@
   "union"
   "resource"
   "set"
-  "enum"
-  "intEnum"
+  "metadata"
   "apply"
   "for"
   "with"
-  "metadata"
+  "enum"
+  "intEnum"
 ] @keyword
 
 (simple_type_name) @type.builtin
@@ -38,6 +38,7 @@
   "#"
 ] @punctuation.bracket
 
+(node_keywords) @boolean
 (number) @number
 (quoted_text) @string
 [
@@ -54,15 +55,9 @@
     (identifier) @type
   ))
 
-(apply_statement_singular
-  (trait
-    (shape_id) @attribute
-  )
+(trait
+  (shape_id) @attribute
 )
-(trait_statements
-  (trait
-    (shape_id) @attribute
-  ))
 
 (node_string_value
   (shape_id) @type
@@ -70,45 +65,48 @@
 
 ; (trait_body) @local.scope
 
-(explicit_member
+(shape_member_kvp
   (identifier) @variable
   (shape_id) @type
 )
-(elided_member
+(shape_member_elided
   (identifier) @variable
 )
-(operation_error
-  (identifier) @type
-)
-(structure_statement
+(structure_shape_statement
   (identifier) @type.definition
 )
-(operation_statement
+(operation_shape_statement
   (identifier) @type.definition
 )
-(list_statement
+(list_shape_statement
   (identifier) @type.definition
 )
 (simple_shape_statement
   (identifier) @type.definition
 )
+(resource_shape_statement
+  (identifier) @type.definition
+)
+(union_shape_statement
+  (identifier) @type.definition
+)
+(map_shape_statement
+  (identifier) @type.definition
+)
+(service_shape_statement
+  (identifier) @type.definition
+)
+(set_shape_statement
+  (identifier) @type.definition
+)
 (enum_shape_statement
   (identifier) @type.definition
 )
-(resource_statement
+(operation_shape_statement
   (identifier) @type.definition
 )
-(union_statement
-  (identifier) @type.definition
-)
-(map_statement
-  (identifier) @type.definition
-)
-(service_statement
-  (identifier) @type.definition
-)
-(operation_statement
-  (identifier) @type.definition
+(operation_error
+  (identifier) @type
 )
 (structure_resource
   (shape_id) @type
