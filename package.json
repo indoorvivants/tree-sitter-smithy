@@ -4,7 +4,7 @@
   "description": "",
   "main": "bindings/node",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tree-sitter test"
   },
   "author": "",
   "license": "ISC",
@@ -12,10 +12,9 @@
     "nan": "^2.15.0"
   },
   "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-google": "^0.14.0",
     "tree-sitter-cli": "^0.20.6"
-  },
-  "scripts": {
-    "test": "tree-sitter test" 
   },
   "tree-sitter": [
     {
