@@ -1,0 +1,1 @@
+examples/smithy/smithy-model/src/test/resources/software/amazon/smithy/model/errorfiles/validators/defaults/detects-default-out-of-range.smithy
