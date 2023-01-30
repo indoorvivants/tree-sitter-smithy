@@ -226,43 +226,43 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "simple_shape"
+          "name": "simple_shape_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "enum"
+          "name": "enum_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "list"
+          "name": "list_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "map"
+          "name": "map_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "set"
+          "name": "set_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "structure"
+          "name": "structure_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "union"
+          "name": "union_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "service"
+          "name": "service_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "operation"
+          "name": "operation_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "resource"
+          "name": "resource_statement"
         }
       ]
     },
@@ -329,7 +329,7 @@
         ]
       }
     },
-    "simple_shape": {
+    "simple_shape_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -354,7 +354,7 @@
         }
       ]
     },
-    "enum": {
+    "enum_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -445,7 +445,7 @@
         }
       ]
     },
-    "list": {
+    "list_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -474,7 +474,7 @@
         }
       ]
     },
-    "map": {
+    "map_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -503,7 +503,7 @@
         }
       ]
     },
-    "set": {
+    "set_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -532,7 +532,7 @@
         }
       ]
     },
-    "structure": {
+    "structure_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -573,7 +573,7 @@
         }
       ]
     },
-    "union": {
+    "union_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -602,7 +602,7 @@
         }
       ]
     },
-    "service": {
+    "service_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -631,7 +631,7 @@
         }
       ]
     },
-    "operation": {
+    "operation_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -660,7 +660,7 @@
         }
       ]
     },
-    "resource": {
+    "resource_statement": {
       "type": "SEQ",
       "members": [
         {

@@ -61,16 +61,16 @@ module.exports = grammar({
 
     shape_statement: $ => seq(repeat($.trait_statement), $.shape_body),
     shape_body: $ => choice(
-      $.simple_shape,
-      $.enum,
-      $.list,
-      $.map,
-      $.set,
-      $.structure,
-      $.union,
-      $.service,
-      $.operation,
-      $.resource,
+      $.simple_shape_statement,
+      $.enum_statement,
+      $.list_statement,
+      $.map_statement,
+      $.set_statement,
+      $.structure_statement,
+      $.union_statement,
+      $.service_statement,
+      $.operation_statement,
+      $.resource_statement,
     ),
 
     absolute_root_shape_id: $ => seq($.namespace, '#', $.identifier),
@@ -78,9 +78,9 @@ module.exports = grammar({
     shape_id_member: $ => seq('$', $.identifier),
     shape_id: $ => prec.left(seq($.root_shape_id, repeat($.shape_id_member))),
 
-    simple_shape: $ => seq($.primitive, $.identifier, optional($.mixins)),
+    simple_shape_statement: $ => seq($.primitive, $.identifier, optional($.mixins)),
 
-    enum: $ => seq(
+    enum_statement: $ => seq(
       choice('enum', 'intEnum'),
       $.identifier,
       optional($.mixins),
@@ -95,11 +95,11 @@ module.exports = grammar({
       ),
 
     // Container Types
-    list: $ => seq('list', $.identifier, optional($.mixins), $.shape_members),
-    map: $ => seq('map', $.identifier, optional($.mixins), $.shape_members),
-    set: $ => seq('set', $.identifier, optional($.mixins), $.shape_members),
+    list_statement: $ => seq('list', $.identifier, optional($.mixins), $.shape_members),
+    map_statement: $ => seq('map', $.identifier, optional($.mixins), $.shape_members),
+    set_statement: $ => seq('set', $.identifier, optional($.mixins), $.shape_members),
 
-    structure: $ => seq(
+    structure_statement: $ => seq(
       'structure',
       $.identifier,
       optional($.structure_resource),
@@ -107,13 +107,13 @@ module.exports = grammar({
       $.shape_members,
     ),
 
-    union: $ => seq('union', $.identifier, optional($.mixins), $.shape_members),
+    union_statement: $ => seq('union', $.identifier, optional($.mixins), $.shape_members),
 
-    service: $ => seq('service', $.identifier, optional($.mixins), $.node_object),
+    service_statement: $ => seq('service', $.identifier, optional($.mixins), $.node_object),
 
-    operation: $ => seq('operation', $.identifier, optional($.mixins), $.operation_body),
+    operation_statement: $ => seq('operation', $.identifier, optional($.mixins), $.operation_body),
 
-    resource: $ => seq('resource', $.identifier, optional($.mixins), $.node_object),
+    resource_statement: $ => seq('resource', $.identifier, optional($.mixins), $.node_object),
 
     shape_members: $ => seq('{', repeat($.shape_member), '}'),
     shape_member: $ => seq(
