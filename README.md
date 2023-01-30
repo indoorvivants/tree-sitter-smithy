@@ -1,5 +1,8 @@
 # [Tree Sitter](https://tree-sitter.github.io/tree-sitter/) grammar for [Smithy](https://awslabs.github.io/smithy/index.html)
 
+[![Build Status](https://github.com/indoorvivants/tree-sitter-smithy/workflows/CI/badge.svg)](https://github.com/indoorvivants/tree-sitter-smithy/workflows/CI/badge.svg)
+[![Discord](https://img.shields.io/discord/1063097320771698699?logo=discord)](https://discord.gg/w7nTvsVJhm)
+
 If you find yourself editing Smithy files in Neovim, you might be interested in this project.
 
 It provides a "good enough" grammar for Smithy, and a set of highlighting queries that 
