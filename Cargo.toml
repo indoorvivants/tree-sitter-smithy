@@ -4,7 +4,7 @@ description = "smithy grammar for the tree-sitter parsing library"
 version = "1.0.0"
 keywords = ["incremental", "parsing", "smithy"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/tree-sitter/tree-sitter-smithy"
+repository = "https://github.com/indoorvivants/tree-sitter-smithy"
 edition = "2018"
 license = "MIT"
 
