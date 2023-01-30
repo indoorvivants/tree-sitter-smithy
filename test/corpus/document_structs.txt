@@ -874,7 +874,7 @@ apply XmlTimestamps @httpResponseTests([
               """,
         bodyMediaType: "application/xml",
         headers: {
-            "Content-Type": "application/xml"
+            "Content-Type": "application/xml\n"
         },
         params: {
             httpDateOnTarget: 1398796238
@@ -1348,7 +1348,8 @@ list XmlNamespacedList {
               (key_identifier)))
           (node_value
             (literal
-              (string)))))
+              (string
+                (string_fragment))))))
       (shape_section
         (namespace_statement
           (namespace
@@ -1469,13 +1470,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -1510,13 +1513,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1529,13 +1534,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1548,7 +1548,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1556,16 +1564,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1576,13 +1588,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -1638,13 +1652,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1657,13 +1673,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1676,7 +1687,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1684,16 +1703,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1704,13 +1727,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -1718,13 +1743,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1737,13 +1764,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1756,7 +1778,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1764,16 +1794,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1784,13 +1818,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -1798,13 +1834,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1817,13 +1855,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1836,7 +1869,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1844,16 +1885,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1864,13 +1909,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -1878,13 +1925,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1897,13 +1946,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1916,7 +1960,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1924,10 +1976,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1938,13 +1992,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -1952,13 +2008,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1971,13 +2029,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1990,7 +2043,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -1998,10 +2059,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2012,13 +2075,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2026,13 +2091,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2045,13 +2112,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2064,7 +2126,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2072,10 +2142,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2086,13 +2158,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))))))))))))))
+                                      (string
+                                        (string_fragment)))))))))))))))))
         (apply_statement
           (apply_statement_singular
             (shape_id
@@ -2113,13 +2187,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2139,13 +2215,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2153,16 +2230,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2173,13 +2254,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -2235,14 +2318,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2262,30 +2346,35 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
                                   (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
-                              (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2296,19 +2385,24 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment)
+                                        (escape_sequence)
+                                        (escape_sequence))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))))
+                                (string
+                                  (string_fragment)))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2316,13 +2410,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2342,13 +2438,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2356,16 +2453,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2376,13 +2477,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2390,13 +2493,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2416,13 +2521,16 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2430,16 +2538,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2450,13 +2562,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2464,13 +2578,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2490,13 +2606,16 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2504,16 +2623,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2524,13 +2647,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2538,13 +2663,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2564,13 +2691,16 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2578,16 +2708,20 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2598,13 +2732,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2612,13 +2748,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2638,13 +2776,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2652,10 +2791,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2666,13 +2807,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2680,13 +2823,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2706,13 +2851,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2720,10 +2866,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2734,13 +2882,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string)))))))))
+                                      (string
+                                        (string_fragment))))))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -2748,13 +2898,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2774,13 +2926,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2788,10 +2941,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2802,13 +2957,15 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))))))))))))))
+                                      (string
+                                        (string_fragment)))))))))))))))))
         (shape_statement
           (shape_body
             (structure
@@ -2823,7 +2980,8 @@ list XmlNamespacedList {
                       (trait_body_value
                         (trait_node_value
                           (literal
-                            (string))))))
+                            (string
+                              (string_fragment)))))))
                   (field)
                   (shape_id
                     (root_shape_id
@@ -2877,7 +3035,8 @@ list XmlNamespacedList {
                       (trait_body_value
                         (trait_node_value
                           (literal
-                            (string))))))
+                            (string
+                              (string_fragment)))))))
                   (field)
                   (shape_id
                     (root_shape_id
@@ -2900,13 +3059,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (trait_statement
             (shape_id
               (root_shape_id
@@ -2917,7 +3078,8 @@ list XmlNamespacedList {
                   (node_array
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -2952,13 +3114,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2971,13 +3135,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2990,7 +3149,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -2998,10 +3165,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3018,7 +3187,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string)))))))))))))
+                                (string
+                                  (string_fragment))))))))))))))
         (apply_statement
           (apply_statement_singular
             (shape_id
@@ -3039,13 +3209,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3065,13 +3237,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3079,10 +3252,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3099,7 +3274,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))))
+                                (string
+                                  (string_fragment)))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -3107,13 +3283,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3133,13 +3311,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3147,10 +3326,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3167,7 +3348,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string)))))))))))))
+                                (string
+                                  (string_fragment))))))))))))))
         (shape_statement
           (shape_body
             (structure
@@ -3192,13 +3374,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -3233,13 +3417,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3252,13 +3438,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3271,7 +3452,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3279,10 +3468,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3293,7 +3484,8 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))))))))))))))
+                                      (string
+                                        (string_fragment)))))))))))))))))
         (apply_statement
           (apply_statement_singular
             (shape_id
@@ -3314,13 +3506,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3340,13 +3534,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3354,10 +3549,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3368,7 +3565,8 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))))))))))))))
+                                      (string
+                                        (string_fragment)))))))))))))))))
         (comment)
         (shape_statement
           (trait_statement
@@ -3383,13 +3581,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (trait_statement
             (shape_id
               (root_shape_id
@@ -3400,7 +3600,8 @@ list XmlNamespacedList {
                   (node_array
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -3435,13 +3636,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3461,13 +3664,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3475,10 +3679,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3495,7 +3701,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))))
+                                (string
+                                  (string_fragment)))))))
                       (node_value
                         (node_object
                           (node_object_kvp
@@ -3503,13 +3710,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3529,13 +3738,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3543,10 +3753,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3563,7 +3775,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string)))))))))))))
+                                (string
+                                  (string_fragment))))))))))))))
         (shape_statement
           (shape_body
             (structure
@@ -3590,13 +3803,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -3631,13 +3846,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3650,13 +3867,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3669,7 +3881,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3677,10 +3897,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3699,13 +3921,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3718,13 +3942,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3737,7 +3956,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3745,10 +3972,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3767,13 +3996,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3786,13 +4017,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3805,7 +4031,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3813,10 +4047,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3835,13 +4071,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3854,13 +4092,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3873,7 +4106,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3881,10 +4122,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3903,13 +4146,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3922,13 +4167,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3941,7 +4181,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3949,10 +4197,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3971,13 +4221,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -3990,13 +4242,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4009,7 +4256,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4017,10 +4272,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4039,13 +4296,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4058,13 +4317,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4077,7 +4331,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4085,10 +4347,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4120,13 +4384,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4146,13 +4412,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4160,10 +4427,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4182,13 +4451,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4208,13 +4479,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4222,10 +4494,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4244,13 +4518,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4270,13 +4546,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4284,10 +4561,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4306,13 +4585,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4332,13 +4613,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4346,10 +4628,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4368,13 +4652,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4394,13 +4680,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4408,10 +4695,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4430,13 +4719,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4456,13 +4747,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4470,10 +4762,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4492,13 +4786,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4518,13 +4814,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4532,10 +4829,13 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment)
+                                        (escape_sequence))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4566,7 +4866,8 @@ list XmlNamespacedList {
                       (trait_body_value
                         (trait_node_value
                           (literal
-                            (string))))))
+                            (string
+                              (string_fragment)))))))
                   (field)
                   (shape_id
                     (root_shape_id
@@ -4585,7 +4886,8 @@ list XmlNamespacedList {
                       (trait_body_value
                         (trait_node_value
                           (literal
-                            (string))))))
+                            (string
+                              (string_fragment)))))))
                   (field)
                   (shape_id
                     (root_shape_id
@@ -4604,7 +4906,8 @@ list XmlNamespacedList {
                       (trait_body_value
                         (trait_node_value
                           (literal
-                            (string))))))
+                            (string
+                              (string_fragment)))))))
                   (field)
                   (shape_id
                     (root_shape_id
@@ -4632,13 +4935,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -4673,13 +4978,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4692,13 +4999,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4711,7 +5013,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4719,10 +5029,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4733,19 +5045,22 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -4753,10 +5068,12 @@ list XmlNamespacedList {
                                     (node_array
                                       (node_value
                                         (literal
-                                          (string)))
+                                          (string
+                                            (string_fragment))))
                                       (node_value
                                         (literal
-                                          (string))))))
+                                          (string
+                                            (string_fragment)))))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -4764,10 +5081,12 @@ list XmlNamespacedList {
                                     (node_array
                                       (node_value
                                         (literal
-                                          (string)))
+                                          (string
+                                            (string_fragment))))
                                       (node_value
                                         (literal
-                                          (string))))))
+                                          (string
+                                            (string_fragment)))))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -4775,16 +5094,20 @@ list XmlNamespacedList {
                                     (node_object
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
-                                            (string))))
+                                            (string
+                                              (string_fragment)))))
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
-                                            (string)))))))))))))))))))
+                                            (string
+                                              (string_fragment))))))))))))))))))))
         (apply_statement
           (apply_statement_singular
             (shape_id
@@ -4805,13 +5128,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4831,13 +5156,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4845,10 +5171,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -4859,19 +5187,22 @@ list XmlNamespacedList {
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
                                   (node_value
                                     (literal
-                                      (string))))
+                                      (string
+                                        (string_fragment)))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -4879,10 +5210,12 @@ list XmlNamespacedList {
                                     (node_array
                                       (node_value
                                         (literal
-                                          (string)))
+                                          (string
+                                            (string_fragment))))
                                       (node_value
                                         (literal
-                                          (string))))))
+                                          (string
+                                            (string_fragment)))))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -4890,10 +5223,12 @@ list XmlNamespacedList {
                                     (node_array
                                       (node_value
                                         (literal
-                                          (string)))
+                                          (string
+                                            (string_fragment))))
                                       (node_value
                                         (literal
-                                          (string))))))
+                                          (string
+                                            (string_fragment)))))))
                                 (node_object_kvp
                                   (node_object_key
                                     (key_identifier))
@@ -4901,16 +5236,20 @@ list XmlNamespacedList {
                                     (node_object
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
-                                            (string))))
+                                            (string
+                                              (string_fragment)))))
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
-                                            (string)))))))))))))))))))
+                                            (string
+                                              (string_fragment))))))))))))))))))))
         (shape_statement
           (shape_body
             (structure
@@ -4964,13 +5303,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -5005,13 +5346,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5024,13 +5367,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5043,7 +5381,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5051,10 +5397,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5107,13 +5455,15 @@ list XmlNamespacedList {
                                     (node_object
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
                                             (number))))
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
                                             (number)))))))))))))))))))
@@ -5137,13 +5487,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5163,13 +5515,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5177,10 +5530,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5233,13 +5588,15 @@ list XmlNamespacedList {
                                     (node_object
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
                                             (number))))
                                       (node_object_kvp
                                         (node_object_key
-                                          (string))
+                                          (string
+                                            (string_fragment)))
                                         (node_value
                                           (literal
                                             (number)))))))))))))))))))
@@ -5296,13 +5653,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -5337,13 +5696,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5356,13 +5717,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5375,7 +5731,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5383,10 +5747,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5402,7 +5768,8 @@ list XmlNamespacedList {
                                           (key_identifier))
                                         (node_value
                                           (literal
-                                            (string))))
+                                            (string
+                                              (string_fragment)))))
                                       (node_object_kvp
                                         (node_object_key
                                           (key_identifier))
@@ -5413,7 +5780,8 @@ list XmlNamespacedList {
                                                 (key_identifier))
                                               (node_value
                                                 (literal
-                                                  (string))))
+                                                  (string
+                                                    (string_fragment)))))
                                             (node_object_kvp
                                               (node_object_key
                                                 (key_identifier))
@@ -5424,7 +5792,8 @@ list XmlNamespacedList {
                                                       (key_identifier))
                                                     (node_value
                                                       (literal
-                                                        (string))))
+                                                        (string
+                                                          (string_fragment)))))
                                                   (node_object_kvp
                                                     (node_object_key
                                                       (key_identifier))
@@ -5435,7 +5804,8 @@ list XmlNamespacedList {
                                                             (key_identifier))
                                                           (node_value
                                                             (literal
-                                                              (string))))))))))))))))))))))))))))
+                                                              (string
+                                                                (string_fragment)))))))))))))))))))))))))))))
         (apply_statement
           (apply_statement_singular
             (shape_id
@@ -5456,13 +5826,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5482,13 +5854,14 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5496,10 +5869,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5515,7 +5890,8 @@ list XmlNamespacedList {
                                           (key_identifier))
                                         (node_value
                                           (literal
-                                            (string))))
+                                            (string
+                                              (string_fragment)))))
                                       (node_object_kvp
                                         (node_object_key
                                           (key_identifier))
@@ -5526,7 +5902,8 @@ list XmlNamespacedList {
                                                 (key_identifier))
                                               (node_value
                                                 (literal
-                                                  (string))))
+                                                  (string
+                                                    (string_fragment)))))
                                             (node_object_kvp
                                               (node_object_key
                                                 (key_identifier))
@@ -5537,7 +5914,8 @@ list XmlNamespacedList {
                                                       (key_identifier))
                                                     (node_value
                                                       (literal
-                                                        (string))))
+                                                        (string
+                                                          (string_fragment)))))
                                                   (node_object_kvp
                                                     (node_object_key
                                                       (key_identifier))
@@ -5548,7 +5926,8 @@ list XmlNamespacedList {
                                                             (key_identifier))
                                                           (node_value
                                                             (literal
-                                                              (string))))))))))))))))))))))))))))
+                                                              (string
+                                                                (string_fragment)))))))))))))))))))))))))))))
         (shape_statement
           (shape_body
             (structure
@@ -5603,13 +5982,15 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))
+                        (string
+                          (string_fragment)))))
                   (trait_object_kvp
                     (node_object_key
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (operation
               (identifier)
@@ -5644,13 +6025,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5663,13 +6046,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
-                          (node_object_kvp
-                            (node_object_key
-                              (key_identifier))
-                            (node_value
-                              (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5682,7 +6060,20 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)))))
+                          (node_object_kvp
+                            (node_object_key
+                              (key_identifier))
+                            (node_value
+                              (literal
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5690,10 +6081,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5709,7 +6102,8 @@ list XmlNamespacedList {
                                           (key_identifier))
                                         (node_value
                                           (literal
-                                            (string))))
+                                            (string
+                                              (string_fragment)))))
                                       (node_object_kvp
                                         (node_object_key
                                           (key_identifier))
@@ -5717,10 +6111,12 @@ list XmlNamespacedList {
                                           (node_array
                                             (node_value
                                               (literal
-                                                (string)))
+                                                (string
+                                                  (string_fragment))))
                                             (node_value
                                               (literal
-                                                (string)))))))))))))))))))))
+                                                (string
+                                                  (string_fragment))))))))))))))))))))))
         (apply_statement
           (apply_statement_singular
             (shape_id
@@ -5741,13 +6137,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5767,13 +6165,19 @@ list XmlNamespacedList {
                             (node_value
                               (literal
                                 (string
-                                  (string_fragment)))))
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)
+                                  (multiline_string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5781,10 +6185,12 @@ list XmlNamespacedList {
                               (node_object
                                 (node_object_kvp
                                   (node_object_key
-                                    (string))
+                                    (string
+                                      (string_fragment)))
                                   (node_value
                                     (literal
-                                      (string)))))))
+                                      (string
+                                        (string_fragment))))))))
                           (node_object_kvp
                             (node_object_key
                               (key_identifier))
@@ -5800,7 +6206,8 @@ list XmlNamespacedList {
                                           (key_identifier))
                                         (node_value
                                           (literal
-                                            (string))))
+                                            (string
+                                              (string_fragment)))))
                                       (node_object_kvp
                                         (node_object_key
                                           (key_identifier))
@@ -5808,10 +6215,12 @@ list XmlNamespacedList {
                                           (node_array
                                             (node_value
                                               (literal
-                                                (string)))
+                                                (string
+                                                  (string_fragment))))
                                             (node_value
                                               (literal
-                                                (string)))))))))))))))))))))
+                                                (string
+                                                  (string_fragment))))))))))))))))))))))
         (shape_statement
           (trait_statement
             (shape_id
@@ -5825,7 +6234,8 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (structure
               (identifier)
@@ -5849,7 +6259,8 @@ list XmlNamespacedList {
                       (key_identifier))
                     (node_value
                       (literal
-                        (string))))))))
+                        (string
+                          (string_fragment)))))))))
           (shape_body
             (structure
               (identifier)
@@ -5867,13 +6278,15 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))
+                                (string
+                                  (string_fragment)))))
                           (trait_object_kvp
                             (node_object_key
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))))))
+                                (string
+                                  (string_fragment)))))))))
                   (field)
                   (shape_id
                     (root_shape_id
@@ -5891,7 +6304,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))))))
+                                (string
+                                  (string_fragment)))))))))
                   (field)
                   (shape_id
                     (root_shape_id
@@ -5914,7 +6328,8 @@ list XmlNamespacedList {
                               (key_identifier))
                             (node_value
                               (literal
-                                (string))))))))
+                                (string
+                                  (string_fragment)))))))))
                   (field)
                   (shape_id
                     (root_shape_id

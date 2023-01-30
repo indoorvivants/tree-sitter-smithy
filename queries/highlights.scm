@@ -78,11 +78,7 @@
 ; Literals
 
 (string) @string
-; TODO: figure out how to query aliased rules wrapped in a token
-; Maybe have $.escape be an extra?
-; (string
-;   (string_fragment
-;   (escape)) @string.escape)
+(escape_sequence) @string.escape
 
 (number) @number
 
