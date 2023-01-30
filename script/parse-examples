@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+function checkout() {
+  repo=$1; url=$2; sha=$3
+
+  if [ ! -d "$repo" ]; then
+    git clone "https://github.com/$url" "$repo"
+  fi
+
+  pushd "$repo"
+  git fetch && git reset --hard "$sha"
+  popd
+}
+
+checkout examples/smithy awslabs/smithy 84374310805b5df5ed8da50f2e75f95042c498ed
+
+known_failures="$(cat script/known_failures.txt)"
+
+# Remove directories testing invalid syntax
+find examples -type d \( -name invalid \) -exec rm -rf {} +
+
+# shellcheck disable=2046
+tree-sitter parse -q \
+	'examples/**/*.smithy' \
+	$(for file in $known_failures; do echo "!${file}"; done)
+
+example_count=$(find examples -name '*.smithy' | wc -l)
+failure_count=$(wc -w <<< "$known_failures")
+success_count=$(( example_count - failure_count ))
+success_percent=$(bc -l <<< "100*${success_count}/${example_count}")
+
+printf \
+  "Successfully parsed %d of %d example files (%.1f%%)\n" \
+  $success_count "$example_count" "$success_percent"
+
