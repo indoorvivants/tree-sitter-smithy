@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "bindings/node",
-  "scripts": {
-    "test": "tree-sitter test"
-  },
+  "keywords": [
+    "parser",
+    "lexer",
+    "smithy"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indoorvivants/tree-sitter-smithy/issues"
+  },
   "dependencies": {
     "nan": "^2.15.0"
   },
@@ -16,11 +21,21 @@
     "eslint-config-google": "^0.14.0",
     "tree-sitter-cli": "^0.20.6"
   },
+  "repository": "https://github.com/indoorvivants/tree-sitter-smithy/issues",
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp build",
+    "test": "tree-sitter test && script/parse-examples",
+    "parse": "tree-sitter parse",
+    "test-windows": "tree-sitter test"
+  },
   "tree-sitter": [
     {
       "scope": "source.smithy",
       "file-types": [
         "smithy"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
       ]
     }
   ]
