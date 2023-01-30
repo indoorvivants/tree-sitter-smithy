@@ -377,6 +377,11 @@
     }
   },
   {
+    "type": "multiline_string_fragment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "namespace",
     "named": true,
     "fields": {},
@@ -945,20 +950,23 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "multiline_string_fragment",
+          "named": true
+        },
         {
           "type": "string_fragment",
           "named": true
         }
       ]
     }
-  },
-  {
-    "type": "string_fragment",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "structure",
@@ -1170,6 +1178,10 @@
     }
   },
   {
+    "type": "\"",
+    "named": false
+  },
+  {
     "type": "\"\"\"",
     "named": false
   },
@@ -1274,6 +1286,10 @@
     "named": true
   },
   {
+    "type": "escape_sequence",
+    "named": true
+  },
+  {
     "type": "false",
     "named": false
   },
@@ -1360,6 +1376,10 @@
   {
     "type": "string",
     "named": false
+  },
+  {
+    "type": "string_fragment",
+    "named": true
   },
   {
     "type": "structure",

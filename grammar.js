@@ -196,33 +196,53 @@ module.exports = grammar({
 
     float: () => seq(optional('-'), /(\d+(\.\d+)?|\.\d+)([Ee][+-]?\d+)?/),
 
+    // Partial credit to https://github.com/tree-sitter/tree-sitter-javascript/blob/15e85e80b851983fab6b12dce5a535f5a0df0f9c/grammar.js#L906
     string: $ => choice($._string_literal, $._multiline_string_literal),
-    _string_literal: $ => token(seq(
+    _string_literal: $ => seq(
       '"',
-      alias(
-        repeat(choice(
-          alias(/\\\\|\\"|\\\/|\\b|\\f|\\n|\\r|\\t|\\u\{[0-9a-fA-F]{1,6}\}/, $.escape),
-          /[^"]/,
-        )),
+      repeat(choice(
         $.string_fragment,
-      ),
+        $._escape_sequence,
+      )),
       '"',
-    )),
+    ),
     _multiline_string_literal: $ => seq(
       '"""',
-      alias(
-        repeat(choice(
-          /[^"]+/,
-          seq(/"[^"]*"/, prec.right(repeat(/[^"]+/))),
-        )),
-        $.string_fragment,
-      ),
+      repeat(choice(
+        alias($._multiline_string_fragment, $.multiline_string_fragment),
+        $._escape_sequence,
+      )),
       '"""',
     ),
+    // Workaround to https://github.com/tree-sitter/tree-sitter/issues/1156
+    // We give names to the token() constructs containing a regexp
+    // so as to obtain a node in the CST.
+    //
+    string_fragment: () =>
+      token.immediate(prec(1, /[^"\\]+/)),
+    _multiline_string_fragment: () =>
+      prec.right(choice(
+        /[^"]+/,
+        seq(/"[^"]*"/, repeat(/[^"]+/)),
+      )),
+    _escape_sequence: $ =>
+      choice(
+        prec(2, token.immediate(seq('\\', /[^abfnrtvxu'\"\\\?]/))),
+        prec(1, $.escape_sequence),
+      ),
+    escape_sequence: () => token.immediate(seq(
+      '\\',
+      choice(
+        /[^xu0-7]/,
+        /[0-7]{1,3}/,
+        /x[0-9a-fA-F]{2}/,
+        /u[0-9a-fA-F]{4}/,
+        /u{[0-9a-fA-F]+}/,
+      ))),
 
     identifier: () => /[A-Za-z_][A-Za-z0-9_]*/,
 
-    comment: () => token(seq('//', /(\\(.|\r?\n)|[^\\\n])*/)),
+    comment: () => token(seq('//', /.*/)),
     documentation_comment: () => seq('///', /.*/),
   },
 });
