@@ -1,3 +1,64 @@
+; Preproc
+
+(control_key (#set! "priority" 105)) @preproc
+
+; Namespace
+
+(namespace (#set! "priority" 105)) @namespace
+
+; Includes
+
+[
+  "use"
+] @include
+
+; Builtins
+
+(primitive) @type.builtin
+[
+  "enum"
+  "intEnum"
+  "list"
+  "map"
+  "set"
+] @type.builtin
+
+; Fields (Members)
+
+; (field) @field
+
+(key_identifier) @field
+(shape_member
+  (field) @field)
+(operation_field) @field
+(operation_error_field) @field
+
+; Constants
+
+(enum_member
+  (enum_field) @constant)
+
+; Types
+
+(identifier) @type
+(structure_resource
+  (shape_id) @type)
+
+; Attributes
+
+(mixins
+  (shape_id) @attribute)
+(trait_statement
+  (shape_id (#set! "priority" 105)) @attribute)
+
+; Operators
+
+[
+  "@"
+  "-"
+  "="
+  ":="
+] @operator
 
 ; Keywords
 
@@ -6,111 +67,52 @@
   "service"
   "structure"
   "operation"
-  "list"
-  "map"
   "union"
   "resource"
-  "set"
   "metadata"
   "apply"
   "for"
   "with"
-  "enum"
-  "intEnum"
 ] @keyword
 
-(simple_type_name) @type.builtin
-"use" @include
+; Literals
+
+(string) @string
+; TODO: figure out how to query aliased rules wrapped in a token
+; Maybe have $.escape be an extra?
+; (string
+;   (string_fragment
+;   (escape)) @string.escape)
+
+(number) @number
+
+(float) @float
+
+(boolean) @boolean
+
+(null) @constant.builtin
+
+; Misc
+
+[
+  "$"
+  "#"
+] @punctuation.special
+
+["{" "}"] @punctuation.bracket
+
+["(" ")"] @punctuation.bracket
+
+["[" "]"] @punctuation.bracket
 
 [
   ":"
   "."
 ] @punctuation.delimiter
 
+; Comments
 
-[
-  "("
-  ")"
-  "["
-  "]"
-  "{"
-  "}"
-  "#"
-] @punctuation.bracket
-
-(node_keywords) @boolean
-(number) @number
-(quoted_text) @string
 [
   (comment)
   (documentation_comment)
-] @comment
-[
-  ("@")
-] @operator
-
-(use_statement
-  (absolute_root_shape_id
-    (namespace) @namespace
-    (identifier) @type
-  ))
-
-(trait
-  (shape_id) @attribute
-)
-
-(node_string_value
-  (shape_id) @type
-)
-
-; (trait_body) @local.scope
-
-(shape_member_kvp
-  (identifier) @variable
-  (shape_id) @type
-)
-(shape_member_elided
-  (identifier) @variable
-)
-(structure_shape_statement
-  (identifier) @type.definition
-)
-(operation_shape_statement
-  (identifier) @type.definition
-)
-(list_shape_statement
-  (identifier) @type.definition
-)
-(simple_shape_statement
-  (identifier) @type.definition
-)
-(resource_shape_statement
-  (identifier) @type.definition
-)
-(union_shape_statement
-  (identifier) @type.definition
-)
-(map_shape_statement
-  (identifier) @type.definition
-)
-(service_shape_statement
-  (identifier) @type.definition
-)
-(set_shape_statement
-  (identifier) @type.definition
-)
-(enum_shape_statement
-  (identifier) @type.definition
-)
-(operation_shape_statement
-  (identifier) @type.definition
-)
-(operation_error
-  (identifier) @type
-)
-(structure_resource
-  (shape_id) @type
-)
-(mixins
-  (shape_id) @type
-)
+] @comment @spell
