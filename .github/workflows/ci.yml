@@ -1,12 +1,24 @@
-name: Build
+name: CI
+
 on:
   push:
     branches:
-      - "**"
+      - main
   pull_request:
     branches:
-      - main
+      - "**"
+
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm test
+
   test:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -14,9 +26,19 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
           node-version: 16
       - run: npm install
       - run: npm test
+
+  test_windows:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run-script test-windows
