@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 /* eslint-disable-next-line spaced-comment */
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
@@ -23,140 +22,149 @@ module.exports = grammar({
   name: 'smithy',
   extras: ($) => [
     /\s/,
-    ',',
-    $.documentation_comment,
     $.comment,
+    $.documentation_comment,
+    ',', // commas are whitespace in smithy
   ],
 
   rules: {
     // TODO: add the actual grammar rules
     source_file: ($) =>
       seq(
-        optional($.control_definition),
-        optional($.metadata_definition),
+        optional($.control_section),
+        optional($.metadata_section),
         optional($.shape_section),
       ),
+
+    control_section: ($) => repeat1($.control_statement),
+    control_statement: ($) => seq($.control_var_name, $.node_value),
+    control_var_name: ($) => seq('$', alias($.node_object_key, $.control_key), ':'),
+
+    metadata_section: ($) => repeat1($.metadata_statement),
+    metadata_statement: ($) => seq('metadata', choice($.identifier, $.string), '=', $.node_value),
 
     shape_section: ($) => seq(
       $.namespace_statement,
       repeat($._definition),
     ),
 
+    namespace_statement: ($) => seq('namespace', $.namespace),
+    namespace: ($) => seq($.identifier, repeat(seq('.', $.identifier))),
+
     _definition: ($) => choice(
       $.use_statement,
-      $.apply_trait_statement,
+      $.apply_statement,
       $.shape_statement,
     ),
 
     use_statement: ($) => seq('use', $.absolute_root_shape_id),
-    namespace_statement: ($) => seq('namespace', $.namespace),
 
-    metadata_definition: ($) => repeat1($.metadata_statement),
-    metadata_statement: ($) => seq('metadata', $.identifier, '=', $.node_value),
-
-    control_definition: ($) => repeat1($.control_statement),
-    control_statement: ($) => seq($.control_var_name, $.node_value),
-
-    shape_statement: ($) => seq(optional($.trait_statements), $.shape_body),
+    shape_statement: ($) => seq(repeat($.trait_statement), $.shape_body),
     shape_body: ($) => choice(
-      $.simple_shape_statement,
-      $.list_shape_statement,
-      $.map_shape_statement,
-      $.set_shape_statement,
-      $.structure_shape_statement,
-      $.union_shape_statement,
-      $.operation_shape_statement,
-      $.resource_shape_statement,
-      $.service_shape_statement,
-      $.enum_shape_statement,
+      $.simple_shape,
+      $.enum,
+      $.list,
+      $.map,
+      $.set,
+      $.structure,
+      $.union,
+      $.service,
+      $.operation,
+      $.resource,
     ),
 
     absolute_root_shape_id: ($) => seq($.namespace, '#', $.identifier),
     root_shape_id: ($) => choice($.absolute_root_shape_id, $.identifier),
     shape_id_member: ($) => seq('$', $.identifier),
     shape_id: ($) => prec.left(seq($.root_shape_id, repeat($.shape_id_member))),
-    control_var_name: ($) => seq('$', $.node_object_key, ':'),
-    namespace: ($) => seq($.identifier, repeat(seq('.', $.identifier))),
 
-    simple_shape_statement: ($) => seq($.primitive, $.identifier, optional($.mixins)),
-    list_shape_statement: ($) => seq('list', $.identifier, optional($.mixins), $.shape_members),
-    set_shape_statement: ($) => seq('set', $.identifier, optional($.mixins), $.shape_members),
-    map_shape_statement: ($) => seq('map', $.identifier, optional($.mixins), $.shape_members),
-    structure_shape_statement: ($) => seq(
-      'structure',
-      $.identifier,
-      optional($.structure_resource),
-      optional($.mixins),
-      $.shape_members,
-    ),
-    union_shape_statement: ($) => seq('union', $.identifier, optional($.mixins), $.shape_members),
+    simple_shape: ($) => seq($.primitive, $.identifier, optional($.mixins)),
 
-    service_shape_statement: ($) => seq('service', $.identifier, optional($.mixins), $.node_object),
-    operation_shape_statement: ($) => seq('operation', $.identifier, optional($.mixins), $.operation_body),
-    resource_shape_statement: ($) => seq('resource', $.identifier, optional($.mixins), $.node_object),
-
-    enum_shape_statement: ($) => seq(
+    enum: ($) => seq(
       choice('enum', 'intEnum'),
       $.identifier,
       optional($.mixins),
       $.enum_members,
     ),
     enum_members: ($) => seq('{', repeat($.enum_member), '}'),
-    enum_member: ($) => seq($.identifier, optional($.value_assignment)),
-
-    shape_members: ($) => seq(
-      '{',
-      repeat($.shape_member),
-      '}',
-    ),
-    shape_member: ($) => seq(
-      optional($.trait_statements),
-      choice(
-        $.shape_member_kvp,
-        $.shape_member_elided,
+    enum_member: ($) =>
+      seq(
+        repeat($.trait_statement),
+        alias($.identifier, $.enum_field),
+        optional($.value_assignment),
       ),
-      optional($.value_assignment),
-    ),
-    shape_member_kvp: ($) => seq($.identifier, ':', $.shape_id),
-    shape_member_elided: ($) => seq('$', $.identifier),
 
-    operation_body: ($) => seq('{', repeat($.operation_member), '}'),
-    operation_member: ($) => choice(
-      $.shape_member_kvp,
-      seq($.identifier, $.inline_structure),
-      $.operation_errors,
-    ),
-    operation_errors: ($) => seq($.identifier, ':', '[', repeat($.operation_error), ']'),
-    operation_error: ($) => $.identifier,
+    // Container Types
+    list: ($) => seq('list', $.identifier, optional($.mixins), $.shape_members),
+    map: ($) => seq('map', $.identifier, optional($.mixins), $.shape_members),
+    set: ($) => seq('set', $.identifier, optional($.mixins), $.shape_members),
 
-    inline_structure: ($) => seq(
-      ':=',
-      optional($.trait_statements),
+    structure: ($) => seq(
+      'structure',
+      $.identifier,
       optional($.structure_resource),
       optional($.mixins),
       $.shape_members,
     ),
 
-    trait_statements: ($) => repeat1($.trait),
-    trait: ($) => seq('@', $.shape_id, optional($.trait_body)),
-    trait_body: ($) => seq('(', optional($.trait_body_value), ')'),
-    trait_body_value: ($) => choice($.trait_structure, $.node_value),
-    trait_structure: ($) => repeat1($.trait_structure_kvp),
-    trait_structure_kvp: ($) => seq($.node_object_key, ':', $.node_value),
+    union: ($) => seq('union', $.identifier, optional($.mixins), $.shape_members),
 
-    apply_trait_statement: ($) => choice($.apply_statement_singular, $.apply_statement_block),
-    apply_statement_singular: ($) => seq('apply', $.shape_id, $.trait),
-    apply_statement_block: ($) => seq('apply', $.shape_id, '{', optional($.trait_statements), '}'),
+    service: ($) => seq('service', $.identifier, optional($.mixins), $.node_object),
+
+    operation: ($) => seq('operation', $.identifier, optional($.mixins), $.operation_body),
+
+    resource: ($) => seq('resource', $.identifier, optional($.mixins), $.node_object),
+
+    shape_members: ($) => seq('{', repeat($.shape_member), '}'),
+    shape_member: ($) => seq(
+      repeat($.trait_statement),
+      choice(
+        seq(alias($.identifier, $.field), ':', $.shape_id),
+        $.shape_member_elided,
+      ),
+      optional($.value_assignment),
+    ),
+    shape_member_elided: ($) => seq('$', $.identifier),
+
+    operation_body: ($) => seq('{', repeat($.operation_member), '}'),
+    operation_member: ($) => prec.left(
+      choice(
+        repeat1(seq(alias($.identifier, $.operation_field), ':', $.shape_id)),
+        seq($.identifier, $.inline_structure),
+        seq($.operation_errors, optional(',')),
+      ),
+    ),
+    operation_errors: ($) => seq(alias($.identifier, $.operation_error_field), ':', '[', repeat($.operation_error), ']'),
+    operation_error: ($) => $.identifier,
+
+    inline_structure: ($) => seq(
+      ':=',
+      repeat($.trait_statement),
+      optional($.structure_resource),
+      optional($.mixins),
+      $.shape_members,
+    ),
+
+    trait_statement: ($) => seq('@', $.shape_id, optional($.trait_body)),
+    trait_body: ($) => seq('(', optional($.trait_body_value), ')'),
+    trait_body_value: ($) => choice($.trait_structure, alias($.node_value, $.trait_node_value)),
+    trait_structure: ($) => repeat1(alias($.node_object_kvp, $.trait_object_kvp)),
+
+    apply_statement: ($) => choice($.apply_statement_singular, $.apply_statement_block),
+    apply_statement_singular: ($) => seq('apply', $.shape_id, $.trait_statement),
+    apply_statement_block: ($) => seq('apply', $.shape_id, '{', repeat($.trait_statement), '}'),
 
     mixins: ($) => seq('with', '[', repeat1($.shape_id), ']'),
     structure_resource: ($) => seq('for', $.shape_id),
     value_assignment: ($) => seq('=', $.node_value),
 
-    comment: () => seq('//', /.*/),
-    documentation_comment: () => seq('///', /.*/),
-
-    node_value: ($) => choice($.node_array, $.node_object, $.literal, $.shape_id),
-    node_object_key: ($) => choice($.string, $.identifier),
+    node_value: ($) =>
+      choice(
+        $.node_array,
+        $.node_object,
+        $.literal,
+        $.shape_id,
+      ),
     node_array: ($) => seq(
       '[',
       repeat($.node_value),
@@ -168,11 +176,13 @@ module.exports = grammar({
       '}',
     ),
     node_object_kvp: ($) => seq($.node_object_key, ':', $.node_value),
+    node_object_key: ($) => choice($.string, alias($.identifier, $.key_identifier)),
 
     literal: ($) => choice(
       $.boolean,
       $.null,
       $.number,
+      $.float,
       $.string,
     ),
 
@@ -182,13 +192,37 @@ module.exports = grammar({
 
     null: () => 'null',
 
-    number: () => /\d+/,
+    number: () => seq(optional('-'), /\d+/),
+
+    float: () => seq(optional('-'), /(\d+(\.\d+)?|\.\d+)([Ee][+-]?\d+)?/),
 
     string: ($) => choice($._string_literal, $._multiline_string_literal),
-    _string_literal: ($) => seq('"', alias(/[^"]*/, $.string_fragment), '"'),
-    _multiline_string_literal: ($) => seq('"""', alias(/[^"\\]*(?:\\.[^"\\]*)*/, $.string_fragment), '"""'),
-
+    _string_literal: ($) => token(seq(
+      '"',
+      alias(
+        repeat(choice(
+          alias(/\\\\|\\"|\\\/|\\b|\\f|\\n|\\r|\\t|\\u\{[0-9a-fA-F]{1,6}\}/, $.escape),
+          /[^"]/,
+        )),
+        $.string_fragment,
+      ),
+      '"',
+    )),
+    _multiline_string_literal: ($) => seq(
+      '"""',
+      alias(
+        repeat(choice(
+          /[^"]+/,
+          seq(/"[^"]*"/, prec.right(repeat(/[^"]+/))),
+        )),
+        $.string_fragment,
+      ),
+      '"""',
+    ),
 
     identifier: () => /[A-Za-z_][A-Za-z0-9_]*/,
+
+    comment: () => token(seq('//', /(\\(.|\r?\n)|[^\\\n])*/)),
+    documentation_comment: () => seq('///', /.*/),
   },
 });
