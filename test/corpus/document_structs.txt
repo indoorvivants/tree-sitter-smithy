@@ -1480,7 +1480,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -2968,7 +2968,7 @@ list XmlNamespacedList {
                                         (string_fragment)))))))))))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -3081,7 +3081,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -3352,7 +3352,7 @@ list XmlNamespacedList {
                                   (string_fragment))))))))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -3384,7 +3384,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -3603,7 +3603,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -3779,7 +3779,7 @@ list XmlNamespacedList {
                                   (string_fragment))))))))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -3813,7 +3813,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -4849,7 +4849,7 @@ list XmlNamespacedList {
                                       (number))))))))))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -4945,7 +4945,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -5252,7 +5252,7 @@ list XmlNamespacedList {
                                               (string_fragment))))))))))))))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -5313,7 +5313,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -5602,7 +5602,7 @@ list XmlNamespacedList {
                                             (number)))))))))))))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -5663,7 +5663,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -5930,7 +5930,7 @@ list XmlNamespacedList {
                                                                 (string_fragment)))))))))))))))))))))))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -5940,7 +5940,7 @@ list XmlNamespacedList {
                       (identifier))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -5955,7 +5955,7 @@ list XmlNamespacedList {
                       (identifier))))))))
         (shape_statement
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -5992,7 +5992,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (operation
+            (operation_statement
               (identifier)
               (operation_body
                 (operation_member
@@ -6237,7 +6237,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -6262,7 +6262,7 @@ list XmlNamespacedList {
                         (string
                           (string_fragment)))))))))
           (shape_body
-            (structure
+            (structure_statement
               (identifier)
               (shape_members
                 (shape_member
@@ -6312,7 +6312,7 @@ list XmlNamespacedList {
                       (identifier))))))))
         (shape_statement
           (shape_body
-            (list
+            (list_statement
               (identifier)
               (shape_members
                 (shape_member

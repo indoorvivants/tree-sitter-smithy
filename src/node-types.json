@@ -154,29 +154,6 @@
     "fields": {}
   },
   {
-    "type": "enum",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_members",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "mixins",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "enum_member",
     "named": true,
     "fields": {},
@@ -215,6 +192,29 @@
     }
   },
   {
+    "type": "enum_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_members",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mixins",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "float",
     "named": true,
     "fields": {}
@@ -247,7 +247,7 @@
     }
   },
   {
-    "type": "list",
+    "type": "list_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -301,7 +301,7 @@
     }
   },
   {
-    "type": "map",
+    "type": "map_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -512,29 +512,6 @@
     "fields": {}
   },
   {
-    "type": "operation",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "mixins",
-          "named": true
-        },
-        {
-          "type": "operation_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "operation_body",
     "named": true,
     "fields": {},
@@ -615,12 +592,35 @@
     }
   },
   {
+    "type": "operation_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mixins",
+          "named": true
+        },
+        {
+          "type": "operation_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "primitive",
     "named": true,
     "fields": {}
   },
   {
-    "type": "resource",
+    "type": "resource_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -662,7 +662,7 @@
     }
   },
   {
-    "type": "service",
+    "type": "service_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -685,7 +685,7 @@
     }
   },
   {
-    "type": "set",
+    "type": "set_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -716,43 +716,43 @@
       "required": true,
       "types": [
         {
-          "type": "enum",
+          "type": "enum_statement",
           "named": true
         },
         {
-          "type": "list",
+          "type": "list_statement",
           "named": true
         },
         {
-          "type": "map",
+          "type": "map_statement",
           "named": true
         },
         {
-          "type": "operation",
+          "type": "operation_statement",
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_statement",
           "named": true
         },
         {
-          "type": "service",
+          "type": "service_statement",
           "named": true
         },
         {
-          "type": "set",
+          "type": "set_statement",
           "named": true
         },
         {
-          "type": "simple_shape",
+          "type": "simple_shape_statement",
           "named": true
         },
         {
-          "type": "structure",
+          "type": "structure_statement",
           "named": true
         },
         {
-          "type": "union",
+          "type": "union_statement",
           "named": true
         }
       ]
@@ -900,7 +900,7 @@
     }
   },
   {
-    "type": "simple_shape",
+    "type": "simple_shape_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -969,7 +969,22 @@
     }
   },
   {
-    "type": "structure",
+    "type": "structure_resource",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "shape_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structure_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -990,21 +1005,6 @@
         },
         {
           "type": "structure_resource",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "structure_resource",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "shape_id",
           "named": true
         }
       ]
@@ -1125,7 +1125,7 @@
     }
   },
   {
-    "type": "union",
+    "type": "union_statement",
     "named": true,
     "fields": {},
     "children": {
