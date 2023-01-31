@@ -1,49 +1,25 @@
 # [Tree Sitter](https://tree-sitter.github.io/tree-sitter/) grammar for [Smithy](https://awslabs.github.io/smithy/index.html)
 
+
 [![Build Status](https://github.com/indoorvivants/tree-sitter-smithy/workflows/CI/badge.svg)](https://github.com/indoorvivants/tree-sitter-smithy/workflows/CI/badge.svg)
 [![Discord](https://img.shields.io/discord/1063097320771698699?logo=discord)](https://discord.gg/w7nTvsVJhm)
 
+<!--toc:start-->
+- [Installation in Neovim](#installation-in-neovim)
+- [Additional links](#additional-links)
+<!--toc:end-->
+
 If you find yourself editing Smithy files in Neovim, you might be interested in this project.
 
-It provides a "good enough" grammar for Smithy, and a set of highlighting queries that 
-should give you decent syntax highlighting.
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/1052965/215846807-17218c3c-4ba3-4a85-86fa-f97f48952bd1.png">
 
-## Installation
+## Installation in Neovim
 
-Make sure you have [Neovim Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin installed and configured. 
+Smithy has been added to [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) so you can follow normal configuration instructions.
 
-Adding syntax highlighting requires 3 steps:
+## Additional links
 
-1. Drop this snippet into your `init.lua`:
+- [Smithy in Neovim: parsing, syntax highlighting, LSP](https://blog.indoorvivants.com/2022-05-12-smithy-neovim) - my blog post documenting the development 
+    of the first version of the grammar and integrating it into my Neovim setup
 
-    ```lua
-    local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-    parser_config.smithy = {
-      install_info = {
-        url = "https://github.com/indoorvivants/tree-sitter-smithy", -- local path or git repo
-        files = {"src/parser.c"},
-        -- optional entries:
-        branch = "main", -- default branch in case of git repo if different from master
-        generate_requires_npm = true, -- if stand-alone parser without npm dependencies
-        requires_generate_from_grammar = true, -- if folder contains pre-generated src/parser.c
-      },
-      filetype = "smithy" -- if filetype does not agrees with parser name
-    }
-    ```
-
-    and run `:TSInstall smithy`, this should succeed
-
-2. By default, Neovim doesn't recognise `smithy` extension and doesn't have a filetype for it.
-
-    If you are not familiar with filetypes, the simplest way to enable them is to add this line 
-    to your `init.lua` script:
-
-    ```lua
-    vim.cmd([[au BufRead,BufNewFile *.smithy		setfiletype smithy]])
-    ```
-3. For some reason, nvim-treesitter doesn't copy the highlighting queries from the repo, so you'll need 
-  to take the [`highlights.scm`](./highlights.scm) file and copy it into `.local/share/nvim/site/pack/packer/start/nvim-treesitter/queries/smithy/highlights.scm`
-
-  If there's a better way of doing it, please let me know.
-
-After that, once you restart neovim, you should have highlighting powered by Tree-sitter in your `*.smithy` files
+  Since then contributors took it from rough sketch to nearly perfect parser, for which I'm extremely grateful.
