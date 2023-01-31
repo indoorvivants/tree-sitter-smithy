@@ -85,15 +85,19 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
-          "type": "key_identifier",
+          "type": "escape_sequence",
           "named": true
         },
         {
-          "type": "string",
+          "type": "multiline_string_fragment",
+          "named": true
+        },
+        {
+          "type": "string_fragment",
           "named": true
         }
       ]
@@ -150,6 +154,11 @@
   },
   {
     "type": "documentation_comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "enum_field",
     "named": true,
     "fields": {}
   },
@@ -215,7 +224,17 @@
     }
   },
   {
+    "type": "field",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "float",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "identifier",
     "named": true,
     "fields": {}
   },
@@ -245,6 +264,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "key_identifier",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "list_statement",
@@ -384,17 +408,7 @@
   {
     "type": "namespace",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "namespace_statement",
@@ -542,6 +556,11 @@
     }
   },
   {
+    "type": "operation_error_field",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "operation_errors",
     "named": true,
     "fields": {},
@@ -559,6 +578,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "operation_field",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "operation_member",
@@ -1282,20 +1306,12 @@
     "named": false
   },
   {
-    "type": "enum_field",
-    "named": true
-  },
-  {
     "type": "escape_sequence",
     "named": true
   },
   {
     "type": "false",
     "named": false
-  },
-  {
-    "type": "field",
-    "named": true
   },
   {
     "type": "float",
@@ -1306,20 +1322,12 @@
     "named": false
   },
   {
-    "type": "identifier",
-    "named": true
-  },
-  {
     "type": "intEnum",
     "named": false
   },
   {
     "type": "integer",
     "named": false
-  },
-  {
-    "type": "key_identifier",
-    "named": true
   },
   {
     "type": "list",
@@ -1348,14 +1356,6 @@
   {
     "type": "operation",
     "named": false
-  },
-  {
-    "type": "operation_error_field",
-    "named": true
-  },
-  {
-    "type": "operation_field",
-    "named": true
   },
   {
     "type": "resource",

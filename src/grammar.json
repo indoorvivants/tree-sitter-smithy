@@ -72,8 +72,17 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "SYMBOL",
-            "name": "node_object_key"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "string"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_control_identifier"
+              }
+            ]
           },
           "named": true,
           "value": "control_key"
@@ -155,7 +164,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "_namespace_identifier"
         },
         {
           "type": "REPEAT",
@@ -168,7 +177,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "identifier"
+                "name": "_namespace_identifier"
               }
             ]
           }
@@ -1558,6 +1567,14 @@
       }
     },
     "identifier": {
+      "type": "PATTERN",
+      "value": "[A-Za-z_][A-Za-z0-9_]*"
+    },
+    "_control_identifier": {
+      "type": "PATTERN",
+      "value": "[A-Za-z_][A-Za-z0-9_]*"
+    },
+    "_namespace_identifier": {
       "type": "PATTERN",
       "value": "[A-Za-z_][A-Za-z0-9_]*"
     },
