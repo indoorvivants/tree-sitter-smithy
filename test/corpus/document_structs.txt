@@ -1344,112 +1344,69 @@ list XmlNamespacedList {
       (control_section
         (control_statement
           (control_var_name
-            (control_key
-              (key_identifier)))
+            (control_key))
           (node_value
             (literal
               (string
                 (string_fragment))))))
       (shape_section
         (namespace_statement
-          (namespace
-            (identifier)
-            (identifier)
+          (namespace))
+        (use_statement
+          (absolute_root_shape_id
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (use_statement
           (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier))
-            (identifier)))
-        (use_statement
-          (absolute_root_shape_id
-            (namespace
-              (identifier)
-              (identifier))
+            (namespace)
             (identifier)))
         (comment)
         (comment)

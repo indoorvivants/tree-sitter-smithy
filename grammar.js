@@ -38,7 +38,7 @@ module.exports = grammar({
 
     control_section: $ => repeat1($.control_statement),
     control_statement: $ => seq($.control_var_name, $.node_value),
-    control_var_name: $ => seq('$', alias($.node_object_key, $.control_key), ':'),
+    control_var_name: $ => seq('$', alias(choice($.string, $._control_identifier), $.control_key), ':'),
 
     metadata_section: $ => repeat1($.metadata_statement),
     metadata_statement: $ => seq('metadata', choice($.identifier, $.string), '=', $.node_value),
@@ -49,7 +49,7 @@ module.exports = grammar({
     ),
 
     namespace_statement: $ => seq('namespace', $.namespace),
-    namespace: $ => seq($.identifier, repeat(seq('.', $.identifier))),
+    namespace: $ => seq($._namespace_identifier, repeat(seq('.', $._namespace_identifier))),
 
     _definition: $ => choice(
       $.use_statement,
@@ -241,6 +241,8 @@ module.exports = grammar({
       ))),
 
     identifier: () => /[A-Za-z_][A-Za-z0-9_]*/,
+    _control_identifier: () => /[A-Za-z_][A-Za-z0-9_]*/,
+    _namespace_identifier: () => /[A-Za-z_][A-Za-z0-9_]*/,
 
     comment: () => token(seq('//', /.*/)),
     documentation_comment: () => seq('///', /.*/),
