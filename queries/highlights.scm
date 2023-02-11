@@ -25,8 +25,6 @@
 
 ; Fields (Members)
 
-; (field) @field
-
 (key_identifier) @field
 (shape_member
   (field) @field)

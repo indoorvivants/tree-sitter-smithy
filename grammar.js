@@ -237,7 +237,7 @@ module.exports = grammar({
         /[0-7]{1,3}/,
         /x[0-9a-fA-F]{2}/,
         /u[0-9a-fA-F]{4}/,
-        /u{[0-9a-fA-F]+}/,
+        /u\{[0-9a-fA-F]+\}/,
       ))),
 
     identifier: () => /[A-Za-z_][A-Za-z0-9_]*/,
