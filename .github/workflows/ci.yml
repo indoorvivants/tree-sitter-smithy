@@ -2,11 +2,10 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    tags: ["v*"]
+    branches: ["main"]
   pull_request:
-    branches:
-      - "**"
+    branches: ["*"]
 
 jobs:
   test:
@@ -20,6 +19,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
       - run: npm install
       - run: npm test
 
